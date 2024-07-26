@@ -3,21 +3,6 @@
 # Copyright (c) Twisted Matrix Laboratories.
 # See LICENSE for details.
 
-import sys
-
-from zope.interface import implementer
-
-from twisted.conch import avatar
-from twisted.conch.checkers import InMemorySSHKeyDB, SSHPublicKeyChecker
-from twisted.conch.ssh import connection, factory, keys, session, userauth
-from twisted.conch.ssh.transport import SSHServerTransport
-from twisted.cred import portal
-from twisted.cred.checkers import InMemoryUsernamePasswordDatabaseDontUse
-from twisted.internet import protocol, reactor
-from twisted.python import components, log
-
-log.startLogging(sys.stderr)
-
 """
 Example of running a custom protocol as a shell session over an SSH channel.
 
@@ -45,6 +30,22 @@ $ ssh -p 5022 -i ssh-keys/client_rsa user@localhost
 # Connect with the SSH client key.
 $ ssh -p 5022 -i ssh-keys/client_rsa user@localhost
 """
+
+import sys
+
+from zope.interface import implementer
+
+from twisted.conch import avatar
+from twisted.conch.checkers import InMemorySSHKeyDB, SSHPublicKeyChecker
+from twisted.conch.ssh import connection, factory, keys, session, userauth
+from twisted.conch.ssh.transport import SSHServerTransport
+from twisted.cred import portal
+from twisted.cred.checkers import InMemoryUsernamePasswordDatabaseDontUse
+from twisted.internet import protocol, reactor
+from twisted.python import components, log
+
+log.startLogging(sys.stderr)
+
 
 # Path to RSA SSH keys used by the server.
 SERVER_RSA_PRIVATE = "ssh-keys/ssh_host_rsa_key"

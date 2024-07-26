@@ -1,10 +1,11 @@
 # Copyright (c) Twisted Matrix Laboratories.
 # See LICENSE for details.
-from __future__ import annotations
 
 """
 Test cases for formmethod module.
 """
+
+from __future__ import annotations
 
 from typing import Callable, Iterable
 

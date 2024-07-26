@@ -8,7 +8,6 @@ clients and servers to forward arbitrary TCP data across the connection.
 Maintainer: Paul Swartz
 """
 
-
 import struct
 
 from twisted.conch.ssh import channel, common
@@ -249,24 +248,23 @@ def unpackGlobal_tcpip_forward(data):
     return host, port
 
 
-"""This is how the data -> eof -> close stuff /should/ work.
-
-debug3: channel 1: waiting for connection
-debug1: channel 1: connected
-debug1: channel 1: read<=0 rfd 7 len 0
-debug1: channel 1: read failed
-debug1: channel 1: close_read
-debug1: channel 1: input open -> drain
-debug1: channel 1: ibuf empty
-debug1: channel 1: send eof
-debug1: channel 1: input drain -> closed
-debug1: channel 1: rcvd eof
-debug1: channel 1: output open -> drain
-debug1: channel 1: obuf empty
-debug1: channel 1: close_write
-debug1: channel 1: output drain -> closed
-debug1: channel 1: rcvd close
-debug3: channel 1: will not send data after close
-debug1: channel 1: send close
-debug1: channel 1: is dead
-"""
+# This is how the data -> eof -> close stuff /should/ work.
+#
+# debug3: channel 1: waiting for connection
+# debug1: channel 1: connected
+# debug1: channel 1: read<=0 rfd 7 len 0
+# debug1: channel 1: read failed
+# debug1: channel 1: close_read
+# debug1: channel 1: input open -> drain
+# debug1: channel 1: ibuf empty
+# debug1: channel 1: send eof
+# debug1: channel 1: input drain -> closed
+# debug1: channel 1: rcvd eof
+# debug1: channel 1: output open -> drain
+# debug1: channel 1: obuf empty
+# debug1: channel 1: close_write
+# debug1: channel 1: output drain -> closed
+# debug1: channel 1: rcvd close
+# debug3: channel 1: will not send data after close
+# debug1: channel 1: send close
+# debug1: channel 1: is dead

@@ -28,7 +28,7 @@ TIMEOUT_RESPONSE = False
 TIMEOUT_DEFERRED = False
 SLOW_GREETING = False
 
-"""Commands"""
+# Commands
 CONNECTION_MADE = b"+OK POP3 localhost v2003.83 server ready"
 
 CAPABILITIES = [b"TOP", b"LOGIN-DELAY 180", b"USER", b"SASL LOGIN"]

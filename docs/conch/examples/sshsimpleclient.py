@@ -2,14 +2,6 @@
 
 # Copyright (c) Twisted Matrix Laboratories.
 # See LICENSE for details.
-import getpass
-import os
-import struct
-import sys
-
-from twisted.conch.ssh import channel, common, connection, keys, transport, userauth
-from twisted.internet import defer, protocol, reactor
-from twisted.python import log
 
 """
 Example of using a simple SSH client.
@@ -21,6 +13,16 @@ For this example you can use:
 
 $ ckeygen -t rsa -f ssh-keys/client_rsa
 """
+
+import getpass
+import os
+import struct
+import sys
+
+from twisted.conch.ssh import channel, common, connection, keys, transport, userauth
+from twisted.internet import defer, protocol, reactor
+from twisted.python import log
+
 
 # Replace this with your username.
 # Default username and password will match the sshsimpleserver.py
