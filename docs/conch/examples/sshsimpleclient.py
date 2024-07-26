@@ -23,7 +23,6 @@ from twisted.conch.ssh import channel, common, connection, keys, transport, user
 from twisted.internet import defer, protocol, reactor
 from twisted.python import log
 
-
 # Replace this with your username.
 # Default username and password will match the sshsimpleserver.py
 USER = b"user"
